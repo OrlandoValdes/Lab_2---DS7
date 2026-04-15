@@ -9,6 +9,8 @@ En la arquitectura MVC:
 - **Vistas (Views):** Representan la interfaz de usuario.
 - **Controladores (Controllers):** Actúan como intermediarios entre modelos y vistas.
 
+En la arquitectura MVC de Laravel, el proyecto se organiza en componentes clave: los **Modelos** (ubicados en `app/`) gestionan la lógica de datos y la interacción con la base de datos; las **Vistas** (`resources/views/`) representan la interfaz de usuario; los **Controladores** (`app/Http/Controllers/`) procesan las solicitudes y coordinan la lógica; y las **Rutas** (`routes/web.php`) conectan las URLs con los controladores. 
+
 El laboratorio consiste en la creación de un sistema básico de autenticación (login y registro), comprendiendo la estructura del proyecto y el flujo de desarrollo en Laravel.
 
 ---
