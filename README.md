@@ -17,23 +17,23 @@ El laboratorio consiste en la creación de un sistema básico de autenticación 
 
 Antes de ejecutar el laboratorio, asegúrate de contar con:
 
-- PHP versión 8.0 o superior  
-- Composer (última versión estable)  
-- Laravel Installer o uso de:
+- 🐘 PHP versión 8.0 o superior  
+- 📦 Composer (última versión estable)  
+- 🚀 Laravel Installer o uso de:
   - `composer create-project`
   - `laravel new`
-- Entorno de desarrollo:
+- 🖥️ Entorno de desarrollo:
   - XAMPP / WampServer / Laragon  
-- Servidor web:
+- 🌐 Servidor web:
   - Apache o Nginx  
-- Base de datos:
+- 🗄️ Base de datos:
   - MySQL o MariaDB  
-- Editor de código:
+- 🧰 Editor de código:
   - Visual Studio Code (recomendado)  
-- Node.js y NPM (para manejo de dependencias frontend)  
-- Sistema Operativo:
-  - Windows / Linux / MacOS  
-
+- 🟢 Node.js y NPM (para manejo de dependencias frontend)  
+- 💻 Sistema Operativo:
+  - Windows / Linux / MacOS
+    
 ---
 
 ## 📦 Instalación y Configuración
@@ -123,3 +123,92 @@ php artisan migrate:rollback
 
 ## 🖼️ Resultados del Laboratorio
 
+### Pantalla de Registro
+
+![image alt](https://github.com/OrlandoValdes/Lab_2---DS7/blob/master/Pantalla_Registro.png?raw=true)
+
+### Pantalla de Registro Lleno
+
+![image alt](https://github.com/OrlandoValdes/Lab_2---DS7/blob/master/Pantalla_Registro_CamposLlenos.png?raw=true)
+
+### Pantalla de Registro Exitoso
+
+![image alt](https://github.com/OrlandoValdes/Lab_2---DS7/blob/master/Pantalla_RegistroExitoso.png?raw=true)
+
+### Pantalla de Inicio de Sesión
+
+![image alt](https://github.com/OrlandoValdes/Lab_2---DS7/blob/master/Pantalla_InicioSesi%C3%B3n.png?raw=true)
+
+### Pantalla de Inicio de Sesión Lleno
+
+![image alt](https://github.com/OrlandoValdes/Lab_2---DS7/blob/master/Pantalla_InicioSesi%C3%B3nLlenos.png?raw=true)
+
+## ⚠️ Dificultades y Soluciones
+
+### ❌ Error de migración (longitud de cadena)
+
+Solución:
+
+```php
+Schema::defaultStringLength(191);
+```
+
+### ❌ Error 500 (Server Error)
+
+Solución:
+
+- Verificar configuración del .env
+- Ejecutar:
+
+```bash
+php artisan config:clear
+```
+
+### ❌ APP_KEY no definida
+
+Solución:
+
+```bash
+php artisan key:generate
+```
+
+### ❌ Problemas con dependencias
+
+Solución:
+
+```bash
+composer update
+npm install
+```
+
+## 🔄 Flujo de Trabajo Utilizado
+
+```bash
+laravel new example-app
+cd example-app
+composer install
+npm install
+php artisan key:generate
+php artisan migrate
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+composer run dev
+```
+
+## 📚 Referencias
+
+1. https://laravel.com/docs
+2. https://getcomposer.org/doc/
+3. https://www.php.net/manual/es/
+4. https://nodejs.org/
+
+<p align="center">
+Este laboratorio ha sido desarrollado por el estudiante de la Universidad 
+Tecnológica de Panamá: 
+Nombre: Orlando Antonio Valdés Bernal
+Correo: orlando.valdes2@utp.ac.pa
+Curso: Desarrollo de Software 7 - 1GS131
+Instructor del Laboratorio: Irina Fong.
+</p>
