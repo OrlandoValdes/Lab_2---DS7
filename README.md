@@ -204,6 +204,11 @@ composer run dev
 3. https://www.php.net/manual/es/
 4. https://nodejs.org/
 
+## ⏱️ Fecha de Ejecución del Laboratorio
+
+Miercoles 8 de abril de 2026
+
+
 <p align="center">
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad 
 Tecnológica de Panamá: <br>
