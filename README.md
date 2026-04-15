@@ -1,8 +1,8 @@
-# Documentación de Laboratorio #2 de Desarrollo de Software 7 - Instalación de Laravel + Ejecución
+# 🖥️ Documentación de Laboratorio #2 de Desarrollo de Software 7 - Instalación de Laravel + Ejecución
 
 Este documentación esta enfocada como guía de instalación y ejecución del framework Laravel, desde prerequisitos, comandos, ejecución y errores comunes.
 
-## Introducción 
+## 📌 Introducción 
 
 En la arquitectura MVC:
 - **Modelos (Models):** Gestionan la lógica de datos y la interacción con la base de datos.
@@ -13,7 +13,7 @@ El laboratorio consiste en la creación de un sistema básico de autenticación 
 
 ---
 
-## Requisitos Previos
+## ⚙️ Requisitos Previos
 
 Antes de ejecutar el laboratorio, asegúrate de contar con:
 
@@ -39,5 +39,87 @@ Antes de ejecutar el laboratorio, asegúrate de contar con:
 ## 📦 Instalación y Configuración
 
 ### 1. Crear el proyecto Laravel
+
 ```bash
 laravel new example-app
+```
+
+### 2. Configurar variables de entorno
+Tendrás que configurar en el archivo .env:
+
+```
+DB_DATABASE=nombre_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+### 3. Instalar dependencias
+Dentro del nuevo proyecto, deberás instalar las siguientes dependencias usando estos comandos en la terminal:
+
+```bash
+composer install
+npm install
+```
+
+### 4. Generar clave de aplicación
+Dentro del proyecto:
+
+```bash
+php artisan key:generate
+```
+
+### 5. Ejecutar migraciones
+Dentro del proyecto:
+
+```bash
+php artisan migrate
+```
+
+### 6. Limpiar caché de configuración
+Dentro del proyecto:
+
+```bash
+php artisan config:clear
+php artisan config:cache
+```
+
+### 7. Ejecutar proyecto
+Dentro del proyecto:
+
+```bash
+composer run dev
+```
+
+## 🔐 Instalación de Autenticación
+Se utilizó Laravel UI para implementar login y registro:
+
+```bash
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+```
+
+## 🗄️ Base de Datos
+- Se utilizó MySQL como sistema gestor de base de datos.
+- Configuración realizada en el archivo .env.
+- Migraciones ejecutadas con:
+  
+```bash
+php artisan migrate
+```
+
+📌 ¿Qué hacen las migraciones?
+- Crean tablas en la base de datos.
+- Permiten versionar la estructura.
+- Se almacenan en database/migrations.
+  
+🔄 Comandos importantes:
+
+```bash
+php artisan migrate
+php artisan migrate:rollback
+```
+
+## 🖼️ Resultados del Laboratorio
+
