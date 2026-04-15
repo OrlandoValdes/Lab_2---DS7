@@ -1,58 +1,125 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🖥️ Documentación de Laboratorio #2 de Desarrollo de Software 7 - Instalación de Laravel + Ejecución
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este documentación esta enfocada como guía de instalación y ejecución del framework Laravel, desde prerequisitos, comandos, ejecución y errores comunes.
 
-## About Laravel
+## 📌 Introducción 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+En la arquitectura MVC:
+- **Modelos (Models):** Gestionan la lógica de datos y la interacción con la base de datos.
+- **Vistas (Views):** Representan la interfaz de usuario.
+- **Controladores (Controllers):** Actúan como intermediarios entre modelos y vistas.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+El laboratorio consiste en la creación de un sistema básico de autenticación (login y registro), comprendiendo la estructura del proyecto y el flujo de desarrollo en Laravel.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ⚙️ Requisitos Previos
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Antes de ejecutar el laboratorio, asegúrate de contar con:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- PHP versión 8.0 o superior  
+- Composer (última versión estable)  
+- Laravel Installer o uso de:
+  - `composer create-project`
+  - `laravel new`
+- Entorno de desarrollo:
+  - XAMPP / WampServer / Laragon  
+- Servidor web:
+  - Apache o Nginx  
+- Base de datos:
+  - MySQL o MariaDB  
+- Editor de código:
+  - Visual Studio Code (recomendado)  
+- Node.js y NPM (para manejo de dependencias frontend)  
+- Sistema Operativo:
+  - Windows / Linux / MacOS  
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## 📦 Instalación y Configuración
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### 1. Crear el proyecto Laravel
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+laravel new example-app
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Configurar variables de entorno
+Tendrás que configurar en el archivo .env:
 
-## Contributing
+```
+DB_DATABASE=nombre_db
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 3. Instalar dependencias
+Dentro del nuevo proyecto, deberás instalar las siguientes dependencias usando estos comandos en la terminal:
 
-## Code of Conduct
+```bash
+composer install
+npm install
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4. Generar clave de aplicación
+Dentro del proyecto:
 
-## Security Vulnerabilities
+```bash
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 5. Ejecutar migraciones
+Dentro del proyecto:
 
-## License
+```bash
+php artisan migrate
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 6. Limpiar caché de configuración
+Dentro del proyecto:
+
+```bash
+php artisan config:clear
+php artisan config:cache
+```
+
+### 7. Ejecutar proyecto
+Dentro del proyecto:
+
+```bash
+composer run dev
+```
+
+## 🔐 Instalación de Autenticación
+Se utilizó Laravel UI para implementar login y registro:
+
+```bash
+composer require laravel/ui
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+```
+
+## 🗄️ Base de Datos
+- Se utilizó MySQL como sistema gestor de base de datos.
+- Configuración realizada en el archivo .env.
+- Migraciones ejecutadas con:
+  
+```bash
+php artisan migrate
+```
+
+📌 ¿Qué hacen las migraciones?
+- Crean tablas en la base de datos.
+- Permiten versionar la estructura.
+- Se almacenan en database/migrations.
+  
+🔄 Comandos importantes:
+
+```bash
+php artisan migrate
+php artisan migrate:rollback
+```
+
+## 🖼️ Resultados del Laboratorio
+
