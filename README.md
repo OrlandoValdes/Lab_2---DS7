@@ -206,9 +206,9 @@ composer run dev
 
 <p align="center">
 Este laboratorio ha sido desarrollado por el estudiante de la Universidad 
-Tecnológica de Panamá: 
-Nombre: Orlando Antonio Valdés Bernal
-Correo: orlando.valdes2@utp.ac.pa
-Curso: Desarrollo de Software 7 - 1GS131
+Tecnológica de Panamá: <br>
+Nombre: Orlando Antonio Valdés Bernal<br>
+Correo: orlando.valdes2@utp.ac.pa<br>
+Curso: Desarrollo de Software 7 - 1GS131<br>
 Instructor del Laboratorio: Irina Fong.
 </p>
