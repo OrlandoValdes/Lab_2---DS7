@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-04-2026 a las 01:13:11
+-- Tiempo de generación: 15-04-2026 a las 01:22:49
 -- Versión del servidor: 8.4.7
 -- Versión de PHP: 8.3.28
 
@@ -65,13 +65,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(3, 'Maria', 'mariavargas@utp.ac.com', NULL, '$2y$12$EpRtIPHM439GbnUgSFdU9eX4cBNEEm5pi3casWZGfJa1zVnpUTkcu', NULL, '2026-04-15 06:17:11', '2026-04-15 06:17:11'),
 (2, 'Juan', 'JuanPerez@gmail.com', NULL, '$2y$12$VULgZyTW5D7RpEGvyJfyB.BpT4uQqdUcKExBGvQde6ylqVFWiXN5q', NULL, '2026-04-08 21:08:59', '2026-04-08 21:08:59');
 COMMIT;
 
